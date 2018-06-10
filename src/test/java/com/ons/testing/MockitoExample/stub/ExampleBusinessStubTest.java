@@ -1,7 +1,7 @@
-package com.ons.testing.MockitoExample;
+package com.ons.testing.MockitoExample.stub;
 
 import com.ons.testing.MockitoExample.business.DataService;
-import com.ons.testing.MockitoExample.business.ExampleBusinessImpl;
+import com.ons.testing.MockitoExample.business.stub.ExampleBusinessStubImpl;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,15 +9,14 @@ import static org.junit.Assert.assertEquals;
 /**
  * Created by tobinj on 10/06/2018.
  */
-public class ExampleBusinessImplTest {
-
+public class ExampleBusinessStubTest {
 
     @Test
     public void testFindGreatestFromAllData() {
 
 
-        ExampleBusinessImpl businessImpl
-                = new ExampleBusinessImpl(new DataServiceStub());
+        ExampleBusinessStubImpl businessImpl
+                = new ExampleBusinessStubImpl(new DataServiceStub());
 
         int result = businessImpl.findTheGreatestFromAllData();
         assertEquals(30, result);

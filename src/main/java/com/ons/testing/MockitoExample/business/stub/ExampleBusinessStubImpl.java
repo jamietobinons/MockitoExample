@@ -1,13 +1,15 @@
-package com.ons.testing.MockitoExample.business;
+package com.ons.testing.MockitoExample.business.stub;
+
+import com.ons.testing.MockitoExample.business.DataService;
 
 /**
  * Created by tobinj on 10/06/2018.
  */
-public class ExampleBusinessImpl {
+public class ExampleBusinessStubImpl {
     // Dependency on this Data Service
     private DataService dataService;
 
-    public ExampleBusinessImpl(DataService dataService) {
+    public ExampleBusinessStubImpl(DataService dataService) {
         this.dataService = dataService;
     }
 
