@@ -7,7 +7,11 @@ public class ExampleBusinessImpl {
     // Dependency on this Data Service
     private DataService dataService;
 
-    int findTheGreatestFromAllData(){
+    public ExampleBusinessImpl(DataService dataService) {
+        this.dataService = dataService;
+    }
+
+    public int findTheGreatestFromAllData(){
         int[] data = dataService.retrieveAllData();
         int greatest = Integer.MIN_VALUE;
 
